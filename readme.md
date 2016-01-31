@@ -1,6 +1,6 @@
 ### Social Sharer
 
-> The final social share module ***made in plain javascript***
+> The final social share module
 
 ## Demo
 
@@ -8,9 +8,11 @@ Go to the [demo page](http://fusenlabs.github.io/socialsharer)
 
 ## Features
 
+- Simple and ligthing 10k share plugin
 - Plain js module, you can use it with whaterever framework
 - No dependencies
-- Themes support
+- Themes support customizable
+- SVG support
 
 ## Install
 
@@ -34,6 +36,6 @@ Share(
 
 ## Themes
 
-## Contributing
 
 ## License
+MIT
