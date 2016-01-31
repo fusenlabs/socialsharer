@@ -1,0 +1,24 @@
+{
+  "name": "socialsharer",
+  "version": "0.1.0",
+  "description": "The final social share plugin in plain javascript",
+  "main": "src/share",
+  "scripts": {
+    "start": "watchify -s Share -do lib/share.js src/share.js -t [ babelify --presets [ es2015 ] --plugins [ add-module-exports ] ] --source-maps inline",
+    "build": "browserify -s Share -do lib/share.js src/share.js -t [ babelify --presets [ es2015 ] --plugins [ add-module-exports ] ] && uglifyjs -o lib/share.min.js lib/share.js"
+  },
+  "author": "@loverajoel",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^0.11.0"
+  }
+}

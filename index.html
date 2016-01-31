@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo</title>
+  <link rel="stylesheet" type="text/css" href="themes/minimalist.css">
+</head>
+<body>
+  <div id="social" class="social-sharer minimalism"></div>
+  
+  <script type="text/javascript" src="./lib/share.js"></script>
+  <script type="text/javascript">
+    Share(
+      document.querySelector('#social'),
+      {
+        url: 'http://www.jstips.co/en/converting-truthy-falsy-values-to-boolean/',
+        networks: ['tw', 'fb', 'in'],
+        showCounter: true,
+        title: 'Js Tips Rocks!',
+        summary: 'This is about one tip per day',
+        hastags: '#js #javascript',
+      }
+    );
+  </script>
+</body>
+</html>
