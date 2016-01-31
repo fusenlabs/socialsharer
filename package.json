@@ -4,8 +4,8 @@
   "description": "The final social share plugin in plain javascript",
   "main": "src/share",
   "scripts": {
-    "start": "watchify -s Share -do lib/share.js src/share.js -t [ babelify --presets [ es2015 ] --plugins [ add-module-exports ] ] --source-maps inline",
-    "build": "browserify -s Share -do lib/share.js src/share.js -t [ babelify --presets [ es2015 ] --plugins [ add-module-exports ] ] && uglifyjs -o lib/share.min.js lib/share.js"
+    "start": "watchify -s Share -do lib/share.js src/share.js -t [ babelify --presets [ es2015 ] --plugins [ add-module-exports transform-object-assign ] ] --source-maps inline",
+    "build": "browserify -s Share -do lib/share.js src/share.js -t [ babelify --presets [ es2015 ] --plugins [ add-module-exports transform-object-assign ] ] && uglifyjs -o lib/share.min.js lib/share.js"
   },
   "author": "@loverajoel",
   "license": "ISC",
@@ -19,6 +19,8 @@
     "babelify": "^7.2.0"
   },
   "dependencies": {
+    "babel-plugin-transform-object-assign": "^6.3.13",
+    "core-js": "^2.0.3",
     "whatwg-fetch": "^0.11.0"
   }
 }

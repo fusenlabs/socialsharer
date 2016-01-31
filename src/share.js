@@ -1,3 +1,4 @@
+import 'es6-promise';
 import 'whatwg-fetch';
 import jsonp from 'fetch-jsonp';
 
@@ -50,7 +51,7 @@ let Share = (container, options) => {
 
   /*
    * Retrieve information about a url based in a network
-   * 
+   *
    * @param {String} network Valid network
    */
   let getCount = (network) => {
@@ -65,7 +66,7 @@ let Share = (container, options) => {
 
   /*
    * Open a new window and make the url ready to share
-   * 
+   *
    * @param {String} network Valid network
    */
   let shareUrl = (network) => {
@@ -109,16 +110,16 @@ let Share = (container, options) => {
    */
   let clickHandler = (event) => {
     let target = event.target || event.srcElement
-    if (event.path[0].classList.contains('socier')) {
-      shareUrl(event.path[0].dataset.network);
-    } else if (event.path[1].classList.contains('socier')) {
-      shareUrl(event.path[1].dataset.network);
+    if (event.target.classList.contains('socier')) {
+      shareUrl(event.target.dataset.network);
+    } else if (event.target.parentNode.classList.contains('socier')) {
+      shareUrl(event.target.parentNode.dataset.network);
     }
   };
-  
+
   /*
    * Works as initialization of the library and start to render the template
-   * 
+   *
    * @param {Object} container Html element
    * @param {Array} networks List of networks to work
    * @param {Boolean} showCounter
