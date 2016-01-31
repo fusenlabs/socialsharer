@@ -4,6 +4,8 @@
 
 ## Demo
 
+Go to the [demo page](http://fusenlabs.github.io/socialsharer)
+
 ## Features
 
 - Plain js module, you can use it with whaterever framework
