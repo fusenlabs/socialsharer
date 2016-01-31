@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Demo</title>
+  <title>Social Sharer</title>
   <link rel="stylesheet" type="text/css" href="themes/minimalist.css">
+  <link rel="stylesheet" type="text/css" href="themes/traditional.css">
+  <style type="text/css">
+    body {
+      font-family: sans-serif;
+    }
+  </style>
 </head>
 <body>
+  <h1>Social Sharer</h1>
+
   <div id="social" class="social-sharer minimalism"></div>
+  <div id="social-2" class="social-sharer minimalism"></div>
+  <div id="social-3" class="social-sharer traditional"></div>
+  <div id="social-4" class="social-sharer traditional"></div>
   
   <script type="text/javascript" src="./lib/share.js"></script>
   <script type="text/javascript">
+    // Demo1
     Share(
       document.querySelector('#social'),
       {
-        url: 'http://www.jstips.co/en/converting-truthy-falsy-values-to-boolean/',
+        url: 'http://www.jstips.co/',
+        networks: ['tw', 'fb', 'in']
+      }
+    );
+
+    // Demo2
+    Share(
+      document.querySelector('#social-2'),
+      {
+        url: 'http://www.jstips.co/',
         networks: ['tw', 'fb', 'in'],
-        showCounter: true,
-        title: 'Js Tips Rocks!',
-        summary: 'This is about one tip per day',
-        hastags: '#js #javascript',
+        showCounter: false
+      }
+    );
+
+    // Demo3
+    Share(
+      document.querySelector('#social-3'),
+      {
+        url: 'http://www.jstips.co/',
+        networks: ['tw', 'fb', 'in'],
+      }
+    );
+
+    // Demo3
+    Share(
+      document.querySelector('#social-4'),
+      {
+        url: 'http://www.jstips.co/',
+        networks: ['tw', 'fb', 'in'],
+        showCounter: false
       }
     );
   </script>
