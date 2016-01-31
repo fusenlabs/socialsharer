@@ -32,20 +32,28 @@ let Share = (container, options) => {
    *
    */
   let request = (url, network) => {
-    if (network === 'in') {
-      return jsonp(url)
-        .then(function(response) {
-          return response.json()
-        }).then(response => {
-          return normalize(network, response);
-        });
-    } else {
-      return fetch(url)
-        .then((response) => {
-          return response.json()
-        }).then(response => {
-          return normalize(network, response);
-        });
+    try {
+      if (network === 'in') {
+        return jsonp(url)
+          .then(function(response) {
+            return response.json()
+          }).then(response => {
+            return normalize(network, response);
+          });
+      } else {
+        return fetch(url)
+          .then((response) => {
+            return response.json()
+          }).then(response => {
+            return normalize(network, response);
+          });
+      }
+    } catch (exp) {
+      return {
+        then: () => {
+          return 0;
+        }
+      };
     }
   }
 
