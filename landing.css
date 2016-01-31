@@ -1,0 +1,30 @@
+body {
+	background: #5171B4;
+	font-family: sans-serif;
+  color: #C8D2F8
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+
+}
+
+.header h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.header > span {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.header .social-sharer {
+  width: 175px;
+  margin: 50px auto 0;
+}
